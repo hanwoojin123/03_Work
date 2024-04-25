@@ -1,0 +1,368 @@
+@charset "utf-8";
+/* =============================
+   ========  index.css  ========
+   ======= (HANS TAILOR) =======
+   ============================= */
+
+
+
+/* ========== Mobile(start) ========== */
+@media screen and (max-width: 767px) {
+
+
+	/* ======= visual 영역 ======= */
+
+	section.visual { width: 100%; height: 100vh; }
+	section.visual h3 { color: #fff; font-size: 2.5em; font-family: "Cinzel-Regular"; margin-bottom: 5px; }
+	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1em; font-family: "NotoSerifKR-Regular"; margin-bottom: 30px; }
+	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
+	section.visual > div.info_wrap { position: absolute; width: 100%; top: 70%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+
+
+	/* ======= about 영역 ======= */
+
+	section.about { padding: 3.5714em 1.4285em 2.1428em; font-size: 0.875em; }
+	
+	section.about h3 { font-family: "NotoSanskR-SemiBold"; font-size: 1.5625em; line-height: 1.2; margin-bottom: 0.8em; }
+
+	section.about div.flex_wrap { position: relative; }
+	section.about div.border_wrap { border-left: 2px dashed #211d1b; padding-left: 1.25em; }
+
+	section.about div.info_wrap p.desc { line-height: 1.8; word-break: keep-all; }
+
+	section.about div.flex_wrap[class ~= "_T"] { margin-bottom: 2.1428em; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap { width: 100%; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap > img { display: block; width: 100%; height: 100%; }
+	section.about div.flex_wrap[class ~= "_T"] div.info_wrap { margin-top: 2.1428em; }
+
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap { width: 100%; }
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap > img { display: block; width: 100%; }
+	section.about div.flex_wrap[class ~= "_B"] div.info_wrap { margin-top: 2.1428em; }
+
+
+	/* ======= lookbook 영역 ======= */
+
+	section.lookbook { padding: 2.1428em 1.4285em 3.9285em; font-size: 0.875em; }
+
+	section.lookbook .view_mask { overflow: hidden; position: relative; width: 100%; height: 110vw; }
+
+	section.lookbook div.slides { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; opacity: 0; transition: transform 0.3s; }
+	section.lookbook div.slides img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.lookbook div.slides[class ~= "cur"] {  /*z-index: 10;*/ opacity: 1; transform: translateX(0%); }
+	section.lookbook div.slides[class ~= "prev"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(-100%); }
+	section.lookbook div.slides[class ~= "next"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(100%); }
+
+	section.lookbook .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.lookbook .dir_btns[class ~= "prev"] { left: 3%; bottom: -50px; }
+	section.lookbook .dir_btns[class ~= "next"] { right: 3%; bottom: -50px;}
+	section.lookbook .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= gallery 영역 ======= */
+
+	section.gallery { padding: 2.1428em 1.4285em 3.9285em; font-size: 0.875em; }
+	section.gallery p.title { margin-bottom: 2.2222em; }
+
+	section.gallery div.btns_wrap { text-align: center; }
+	section.gallery div.btns_wrap > button { margin-bottom: 1.5625em; font-size: 1.1428em; font-family: "NotoSerifKR-Medium"; color: rgba(33, 29, 27, 0.7); }
+	section.gallery div.btns_wrap > button.active { color: #211d1b; border-bottom: 1px solid #211d1b; }
+	section.gallery div.btns_wrap > button + button { margin-left: 15px; }
+
+	section.gallery .view_mask { overflow: hidden; }
+	section.gallery ul { width: 500%; white-space: nowrap; }
+	section.gallery ul > li { display: inline-block; width: 20%; }
+	section.gallery ul > li img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	section.gallery ul > li > div > a > p { display: none; }
+
+	section.gallery .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.gallery .dir_btns[class ~= "prev"] { left: 3%; bottom: -50px; }
+	section.gallery .dir_btns[class ~= "next"] { right: 3%; bottom: -50px; }
+	section.gallery .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= reservation 영역 ======= */
+
+	section.reservation { position: relative; padding: 2.1428em 0; font-size: 0.875em; }
+	section.reservation > img { display: block; width: 100%; height: 21.875em; object-fit: cover; filter: brightness(0.85); }
+	section.reservation > div.info_wrap { position: absolute; display: block; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; width: 100%; }
+	section.reservation > div.info_wrap > p.re_title { font-size: 1.42857em; font-family: "NotoSerifKR-Bold"; margin-bottom: 0.5em; line-height: 1; }
+	section.reservation > div.info_wrap > p.desc { margin-bottom: 1.42857em; }
+
+
+	/* ======= contact 영역 ======= */
+
+	section.contact { padding: 1.875em 1.25em 3.75em; }
+
+	section.contact h2 { font-size: 1.4375em; margin-bottom: 1.0869em; }
+
+	section.contact div.img_wrap { margin: 0 auto; position: relative; width: 100%; }
+	section.contact div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	section.contact div.input_wrap { width: 100%; height: 100%; margin: 2.5em auto 0; }
+	section.contact div.input_wrap input:not(.btn_more) { height: 3em; line-height: 3; margin-bottom: 1.666em; }
+	section.contact div.input_wrap input > form { overflow: hidden; }
+	section.contact div.input_wrap input.btn_more { float: right; display: inline-block; width: auto; }
+	section.contact div.input_wrap textarea { height: 12.5em; resize: none; margin-bottom: 1.111em; }
+
+	section.contact input:not(.btn_more){height: 3em; line-height: 3;}
+
+
+}
+/* ========== Mobile(end) ========== */
+
+/*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!						!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!	   HANS TAILOR		!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!						!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* ========== Tablet(start) ========== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+	/* ======= visual 영역 ======= */
+
+	section.visual { width: 100%; height: 100vh; }
+	section.visual h3 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 10px; }
+	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 40px; }
+	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
+	section.visual > div.info_wrap { position: absolute; width: 100%; top: 70%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+
+
+	/* ======= about 영역 ======= */
+
+	section.about { padding: 5em 1.75em 6.25em; }
+	
+	section.about h3 { font-family: "NotoSanskR-SemiBold"; font-size: 1.5625em; line-height: 1.2; margin-bottom: 0.8em; }
+
+	section.about div.flex_wrap { display: flex; justify-content: space-between; }
+	section.about div.border_wrap { border-left: 2px dashed #211d1b; padding-left: 1.25em; }
+
+	section.about div.info_wrap p.desc { line-height: 1.8; word-break: keep-all; }
+
+	section.about div.flex_wrap[class ~= "_T"] { position: relative; margin-bottom: 5em; }
+	section.about div.flex_wrap[class ~= "_T"] > h2 { position: absolute; top: 0; left: 0; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap { position: relative; width: 45%; order: 2; align-self: flex-start; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap::before { content: ""; position: absolute; display: block; top: 50px; right: 40px; width: 100%; height: 100%; background: rgba(212, 196, 183, 0.6); z-index: -1; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.about div.flex_wrap[class ~= "_T"] div.info_wrap { align-self: center; order: 1; flex-basis: 43%; margin-top: 8.75em; }
+
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap { position: relative; width: 47%; align-self: flex-start; }
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap::before { content: ""; position: absolute; display: block; top: 40px; left: 45px; width: 100%; height: 100%; background: rgba(212, 196, 183, 0.6); z-index: -1; }
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.about div.flex_wrap[class ~= "_B"] div.info_wrap { align-self: center; flex-basis: 41.5%; margin-top: 2.5em; }
+
+
+	/* ======= lookbook 영역 ======= */
+
+	section.lookbook { padding: 3.125em 1.75em 5.625em; }
+
+	section.lookbook .view_mask { overflow: hidden; position: relative; width: 100%; height: 65vw; }
+
+	section.lookbook div.slides { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; opacity: 0; transition: transform 0.3s; }
+	section.lookbook div.slides img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.lookbook div.slides[class ~= "cur"] {  /*z-index: 10;*/ opacity: 1; transform: translateX(0%); }
+	section.lookbook div.slides[class ~= "prev"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(-100%); }
+	section.lookbook div.slides[class ~= "next"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(100%); }
+
+	section.lookbook .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.lookbook .dir_btns[class ~= "prev"] { left: 3%; bottom: -80px; }
+	section.lookbook .dir_btns[class ~= "next"] { right: 3%; bottom: -80px;}
+	section.lookbook .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= gallery 영역 ======= */
+
+	section.gallery { padding: 3.125em 1.75em 5.625em; }
+	section.gallery p.title { margin-bottom: 2.2222em; }
+
+	section.gallery div.btns_wrap { text-align: center; }
+	section.gallery div.btns_wrap > button { margin-bottom: 1.75em; font-size: 1.25em; font-family: "NotoSerifKR-Medium"; color: rgba(33, 29, 27, 0.7); }
+	section.gallery div.btns_wrap > button.active { color: #211d1b; border-bottom: 1px solid #211d1b; }
+	section.gallery div.btns_wrap > button + button { margin-left: 30px; }
+
+	section.gallery .view_mask { overflow: hidden; }
+	section.gallery ul { width: 250%; white-space: nowrap; }
+	section.gallery ul > li { display: inline-block; width: 20%; padding: 0 10px; }
+	section.gallery ul > li img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	section.gallery ul > li > div > a > p { display: none; }
+
+	section.gallery .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.gallery .dir_btns[class ~= "prev"] { left: 3%; bottom: -80px; }
+	section.gallery .dir_btns[class ~= "next"] { right: 3%; bottom: -80px; }
+	section.gallery .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= reservation 영역 ======= */
+
+	section.reservation { position: relative; padding: 3.125em 0; }
+	section.reservation > img { display: block; width: 100%; height: 21.875em; object-fit: cover; filter: brightness(0.85); }
+	section.reservation > div.info_wrap { position: absolute; display: block; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; }
+	section.reservation > div.info_wrap > p.re_title { font-size: 1.875em; font-family: "NotoSerifKR-Bold"; margin-bottom: 0.6666em; line-height: 1; }
+	section.reservation > div.info_wrap > p.desc { margin-bottom: 1.25em; }
+
+
+	/* ======= contact 영역 ======= */
+
+	section.contact { padding: 3.125em 1.75em 6.25em; }
+	section.contact h2 { margin-bottom: 1.09375em; }
+
+	section.contact div.img_wrap { margin: 0 auto; position: relative; width: 75%; }
+	section.contact div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	section.contact div.input_wrap { width: 75%; margin: 3.125em auto 0; }
+	section.contact div.input_wrap input:not(.btn_more) { margin-bottom: 2.7777em; }
+	section.contact div.input_wrap input > form { overflow: hidden; }
+	section.contact div.input_wrap input.btn_more { float: right; display: inline-block; width: auto; }
+	section.contact div.input_wrap textarea { height: 12.5em; resize: none; margin-bottom: 1.6666em; }
+	section.contact input:not(.btn_more){ height: 3em; line-height: 3;}
+
+
+}
+/* ========== Tablet(end) ========== */
+
+/*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!						!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!	   HANS TAILOR		!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!						!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* ========== Desktop(start) ========== */
+@media screen and (min-width: 1025px) {
+
+
+	/* ======= visual 영역 ======= */
+
+	section.visual { width: 100%; height: 100vh; }
+	section.visual h3 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 15px; }
+	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 50px; }
+	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
+	section.visual > div.info_wrap { position: absolute; top: 58%; right: 14vw; transform: translate(0, -50%); text-align: center; }
+
+
+	/* ======= about 영역 ======= */
+
+	section.about { padding: 6.25em 0 7.5em; }
+	
+	section.about h3 { font-family: "NotoSanskR-SemiBold"; font-size: 1.5625em; line-height: 1.2; margin-bottom: 2.8em; }
+
+	section.about div.flex_wrap { display: flex; justify-content: space-between; }
+	section.about div.border_wrap { border-left: 2px dashed #211d1b; padding-left: 3.125em; }
+
+	section.about div.info_wrap p.desc { line-height: 1.8; word-break: keep-all; }
+
+	section.about div.flex_wrap[class ~= "_T"] { position: relative; margin-bottom: 3.125em; }
+	section.about div.flex_wrap[class ~= "_T"] > h2 { position: absolute; top: 0; left: 0; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap { position: relative; flex-basis: 37%; order: 2; align-self: flex-start; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap::before { content: ""; position: absolute; display: block; top: 75px; right: 60px; width: 100%; height: 100%; background: rgba(212, 196, 183, 0.6); z-index: -1; }
+	section.about div.flex_wrap[class ~= "_T"] > div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover;  }
+	section.about div.flex_wrap[class ~= "_T"] div.info_wrap { margin-top: 12.5em; flex-basis: 43%; order: 1; }
+
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap { position: relative; flex-basis: 40%; align-self: flex-start; }
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap::before { content: ""; position: absolute; display: block; top: 50px; left: 65px; width: 100%; height: 100%; background: rgba(212, 196, 183, 0.6); z-index: -1; }
+	section.about div.flex_wrap[class ~= "_B"] > div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.about div.flex_wrap[class ~= "_B"] div.info_wrap { margin-top: 7.3125em; flex-basis: 41.5%; }
+
+
+	/* ======= lookbook 영역 ======= */
+
+	section.lookbook { padding: 4.375em 0; }
+
+	section.lookbook .view_mask { overflow: hidden; position: relative; width: 100%; height: 600px; }
+	section.lookbook div.slides { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; opacity: 0; transition: transform 0.3s; }
+	section.lookbook div.slides img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	
+	section.lookbook div.slides[class ~= "cur"] {  /*z-index: 10;*/ opacity: 1; transform: translateX(0%); }
+	section.lookbook div.slides[class ~= "prev"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(-100%); }
+	section.lookbook div.slides[class ~= "next"] {  /*z-index: 5;*/ opacity: 1; transform: translateX(100%); }
+
+	section.lookbook .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.lookbook .dir_btns[class ~= "prev"] { left: 0; top: 50%; transform: translate(0, -50%); }
+	section.lookbook .dir_btns[class ~= "next"] { right: 0; top: 50%; transform: translate(0, -50%); }
+	section.lookbook .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= gallery 영역 ======= */
+
+	section.gallery { padding: 4.375em 0; }
+	section.gallery p.title { margin-bottom: 2.5em; }
+
+	section.gallery div.btns_wrap { text-align: center; }
+	section.gallery div.btns_wrap > button { margin-bottom: 2.25em; font-size: 1.25em; font-family: "NotoSerifKR-Medium"; color: rgba(33, 29, 27, 0.7); }
+	section.gallery div.btns_wrap > button.active { color: #211d1b; border-bottom: 1px solid #211d1b; }
+	section.gallery div.btns_wrap > button + button { margin-left: 40px; }
+
+	section.gallery .view_mask { overflow: hidden; }
+	section.gallery ul { width: 166.66%; white-space: nowrap; }
+	section.gallery ul > li { overflow: hidden; position: relative; display: inline-block; width: 20%; padding: 0 20px; }
+	section.gallery ul > li:hover img { filter: brightness(0.6); transition: 0.2s; }
+	section.gallery ul > li img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.gallery ul > li:hover img { transform: scale(1.05); transition: 0.2s; }
+
+	section.gallery ul > li p { position: absolute; transform: translate(0, -50%); color: #fff; opacity: 0; }
+	section.gallery ul > li p.img_title { top: 87%; left: 40px; font-size: 1.375em; font-family: "NotoSansKR-Medium"; }
+	section.gallery ul > li p.desc { top: 95%; left: 40px; }
+	section.gallery ul > li:hover p.img_title { top: 82%; opacity: 1; transition: all 0.2s 0.2s; }
+	section.gallery ul > li:hover p.desc { top: 90%; opacity: 1; transition: all 0.4s 0.2s; }
+
+	section.gallery ul > li > div { overflow: hidden; }
+
+	section.gallery .dir_btns { display: inline-block; position: absolute; z-index: 30; }
+	section.gallery .dir_btns[class ~= "prev"] { left: 0; top: 50%; transform: translate(0, -50%); }
+	section.gallery .dir_btns[class ~= "next"] { right: 0; top: 50%; transform: translate(0, -50%); }
+	section.gallery .dir_btns > span { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background: #211d1b; }
+
+
+	/* ======= reservation 영역 ======= */
+
+	section.reservation { position: relative; padding: 4.375em 0; }
+	section.reservation > img { display: block; width: 100%; height: 21.875em; object-fit: cover; filter: brightness(0.85); }
+	section.reservation > div.info_wrap { position: absolute; display: block; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; }
+	section.reservation > div.info_wrap > p.re_title { font-size: 1.875em; font-family: "NotoSerifKR-Bold"; margin-bottom: 0.6666em; line-height: 1; }
+	section.reservation > div.info_wrap > p.desc { margin-bottom: 1.25em; }
+
+
+	/* ======= contact 영역 ======= */
+
+	section.contact { padding: 4.375em 0 12.40625em; }
+	section.contact > div.inner_wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+	section.contact h2 { flex-basis: 100%; margin-bottom: 1.125em; }
+	section.contact div.img_wrap { position: relative; flex-basis: 48%; }
+	section.contact div.img_wrap::before { content: ""; position: absolute; top: 10%; left: 8%; display: block; width: 100%; height: 100%; z-index: -1; background: rgba(212, 196, 183, 0.6); }
+	section.contact div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+	section.contact div.input_wrap { flex-basis: 40%; margin-top: 5.2959375em; }
+	section.contact div.input_wrap input:not(.btn_more) { margin-bottom: 2.7777em; }
+	section.contact div.input_wrap input > form { overflow: hidden; }
+	section.contact div.input_wrap input.btn_more { float: right; display: inline-block; width: auto; }
+	section.contact div.input_wrap textarea { height: 12.5em; resize: none; margin-bottom: 1.6666em; } 
+
+	section.contact input:not(.btn_more){ height: 3em; line-height: 3;}
+
+
+}
+/* ========== Desktop(end) ========== */
