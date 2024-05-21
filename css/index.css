@@ -13,8 +13,8 @@
 	/* ======= visual 영역 ======= */
 
 	section.visual { width: 100%; height: 100vh; }
-	section.visual h3 { color: #fff; font-size: 2.5em; font-family: "Cinzel-Regular"; margin-bottom: 5px; }
-	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1em; font-family: "NotoSerifKR-Regular"; margin-bottom: 30px; }
+	section.visual h2 { color: #fff; font-size: 2.5em; font-family: "Cinzel-Regular"; margin-bottom: 5px; }
+	section.visual p { color: #fff; font-size: 1em; font-family: "NotoSerifKR-Regular"; margin-bottom: 30px; }
 	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
 	section.visual > div.info_wrap { position: absolute; width: 100%; top: 70%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
 
@@ -134,8 +134,8 @@
 	/* ======= visual 영역 ======= */
 
 	section.visual { width: 100%; height: 100vh; }
-	section.visual h3 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 10px; }
-	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 40px; }
+	section.visual h2 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 10px; }
+	section.visual p { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 40px; }
 	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
 	section.visual > div.info_wrap { position: absolute; width: 100%; top: 70%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
 
@@ -256,8 +256,8 @@
 	/* ======= visual 영역 ======= */
 
 	section.visual { width: 100%; height: 100vh; }
-	section.visual h3 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 15px; }
-	section.visual p.title[class ~= "pre"] { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 50px; }
+	section.visual h2 { color: #fff; font-size: 4.375em; font-family: "Cinzel-Regular"; margin-bottom: 15px; }
+	section.visual p { color: #fff; font-size: 1.5625em; font-family: "NotoSerifKR-Regular"; margin-bottom: 50px; }
 	section.visual img { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75); }
 	section.visual > div.info_wrap { position: absolute; top: 58%; right: 14vw; transform: translate(0, -50%); text-align: center; }
 
